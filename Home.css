@@ -1,0 +1,36 @@
+*{
+font-family: 'Lato', sans-serif;}
+
+.aprime {
+    background-color: teal;}
+
+.a {
+color: black;
+position: absolute;
+top: 0cm;
+left: 0.2cm;}
+
+.b {
+position: absolute;
+top: 0cm;
+right: 0.2cm;}
+
+.c {
+position: absolute;
+top: 1.5cm;
+left: 0.4cm;}
+
+.d {
+position: relative;
+top: 2.5cm;
+left: 0.2cm;}
+
+.e {
+position: relative;
+ top: 2.5cm;
+left: 0.2cm;}
+
+.f {
+position: relative;
+top: 2.5cm;
+left: 0.2cm;}
