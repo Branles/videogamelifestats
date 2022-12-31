@@ -14,11 +14,11 @@ function animate() {
 
   // check for wall collisions
   const squareRect = square.getBoundingClientRect();
-  if (squareRect.top < 0 || squareRect.bottom > window.innerHeight) {
+  if (squareRect.top + window.scrollY < 0 || squareRect.bottom + window.scrollY > window.innerHeight) {
     dy *= -1;
     square.style.backgroundColor = getRandomColor();
   }
-  if (squareRect.left < 0 || squareRect.right > window.innerWidth) {
+  if (squareRect.left + window.scrollX < 0 || squareRect.right + window.scrollX > window.innerWidth) {
     dx *= -1;
     square.style.backgroundColor = getRandomColor();
   }
