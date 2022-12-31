@@ -40,13 +40,18 @@ document.addEventListener('touchstart', function(event) {
   startY = event.touches[0].clientY;
 });
 
-document.addEventListener('touchend', function(event) {
-  endY = event.changedTouches[0].clientY;
-  const swipeUp = endY < startY;
-  if (swipeUp) {
-    swipeSpeed *= 1.1;
+document.addEventListener('touchmove', function(event) {
+  endY = event.touches[0].clientY;
+});
+
+document.addEventListener('touchend', function() {
+  const swipeDistance = endY - startY;
+  if (swipeDistance > 0) {
+    // swipe down
+    scrollSpeed *= 0.9;
   } else {
-    swipeSpeed *= 0.9;
+    // swipe up
+    scrollSpeed *= 1.1;
   }
 });
 
