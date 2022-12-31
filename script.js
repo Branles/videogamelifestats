@@ -15,44 +15,30 @@ function animate() {
   const squareRect = square.getBoundingClientRect();
   if (squareRect.top < 0 || squareRect.bottom > window.innerHeight) {
     dy *= -1;
+    // change square color to a random color
     square.style.backgroundColor = getRandomColor();
   }
   if (squareRect.left < 0 || squareRect.right > window.innerWidth) {
     dx *= -1;
+    // change square color to a random color
     square.style.backgroundColor = getRandomColor();
   }
 }
 
 function getRandomColor() {
-  const letters = '0123456789ABCDEF';
-  let color = '#';
-  for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return 'rgb(' + r + ',' + g + ',' + b + ')';
 }
 
-function getRandomShape() {
-  const shapes = ['square', 'circle', 'triangle'];
-  const shape = shapes[Math.floor(Math.random() * shapes.length)];
-  square.style.borderRadius = '';
-  square.style.borderBottom = '';
-  square.style.borderTop = '';
-  square.style.borderLeft = '';
-  if (shape === 'square') {
-    square.style.borderRadius = '0';
-  } else if (shape === 'circle') {
-    square.style.borderRadius = '50%';
-  } else if (shape === 'triangle') {
-    square.style.borderBottom = '50px solid transparent';
-    square.style.borderTop = '50px solid transparent';
-    square.style.borderLeft = '50px solid blue';
-  }
-}
-
-// start the animation
-animate();
-
+// change square shape on click
 document.addEventListener('click', function() {
-  getRandomShape();
+  if (square.style.borderRadius === '50%') {
+    square.style.borderRadius = '0';
+  } else {
+    square.style.borderRadius = '50%';
+  }
 });
+
+animate();
