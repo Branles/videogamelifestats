@@ -35,6 +35,10 @@ function getRandomColor() {
 function getRandomShape() {
   const shapes = ['square', 'circle', 'triangle'];
   const shape = shapes[Math.floor(Math.random() * shapes.length)];
+  square.style.borderRadius = '';
+  square.style.borderBottom = '';
+  square.style.borderTop = '';
+  square.style.borderLeft = '';
   if (shape === 'square') {
     square.style.borderRadius = '0';
   } else if (shape === 'circle') {
@@ -42,12 +46,4 @@ function getRandomShape() {
   } else if (shape === 'triangle') {
     square.style.borderBottom = '50px solid transparent';
     square.style.borderTop = '50px solid transparent';
-    square.style.borderLeft = '50px solid blue';
-  }
-}
-
-animate();
-
-document.addEventListener('click', function() {
-  getRandomShape();
-});
+    square.style.borderLeft =
