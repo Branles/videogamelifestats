@@ -33,6 +33,28 @@ function getRandomColor() {
   return color;
 }
 
+let startY;
+let endY;
+
+document.addEventListener('touchstart', function(event) {
+  startY = event.touches[0].clientY;
+});
+
+document.addEventListener('touchmove', function(event) {
+  endY = event.touches[0].clientY;
+});
+
+document.addEventListener('touchend', function() {
+  const swipeDistance = endY - startY;
+  if (swipeDistance > 0) {
+    // swipe down
+    scrollSpeed *= 0.9;
+  } else {
+    // swipe up
+    scrollSpeed *= 1.1;
+  }
+});
+
 document.addEventListener('click', function() {
   const scale = Math.random() + 0.5; // random value between 0.5 and 1.5
   square.style.transform = `scale(${scale})`;
