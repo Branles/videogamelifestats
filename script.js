@@ -46,4 +46,13 @@ function getRandomShape() {
   } else if (shape === 'triangle') {
     square.style.borderBottom = '50px solid transparent';
     square.style.borderTop = '50px solid transparent';
-    square.style.borderLeft =
+    square.style.borderLeft = '50px solid blue';
+  }
+}
+
+// start the animation
+animate();
+
+document.addEventListener('click', function() {
+  getRandomShape();
+});
