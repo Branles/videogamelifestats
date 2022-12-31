@@ -41,6 +41,11 @@ document.addEventListener('click', function() {
 document.addEventListener('wheel', function(event) {
   if (event.deltaY > 0) {
     // scroll down
-    scrollSpeed *= 0.9;
+scrollSpeed *= 0.9;
   } else {
-   
+    // scroll up
+    scrollSpeed *= 1.1;
+  }
+});
+
+animate();
