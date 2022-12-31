@@ -25,12 +25,6 @@ function animate() {
   }
 }
 
-function changeShape() {
-  const shapes = ['circle', 'triangle', 'square', 'star', 'diamond'];
-  const shape = shapes[Math.floor(Math.random() * shapes.length)];
-  square.className = shape;
-}
-
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';
@@ -38,6 +32,14 @@ function getRandomColor() {
     color += letters[Math.floor(Math.random() * 16)];
   }
   return color;
+}
+
+function changeShape() {
+  const shapes = ['circle', 'triangle', 'square'];
+  const currentShape = square.className;
+  let index = shapes.indexOf(currentShape);
+  index = (index + 1) % shapes.length;
+  square.className = shapes[index];
 }
 
 animate();
