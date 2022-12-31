@@ -41,8 +41,8 @@ document.addEventListener('touchstart', function(event) {
 });
 
 document.addEventListener('touchmove', function(event) {
-  endY = event.touches[0].clientY;
   event.preventDefault(); // prevent page reload
+  endY = event.touches[0].clientY;
 });
 
 document.addEventListener('touchend', function() {
