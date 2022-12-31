@@ -33,22 +33,20 @@ function getRandomColor() {
   return color;
 }
 
-let startX;
-let endX;
+let startY;
+let endY;
 
 document.addEventListener('touchstart', function(event) {
-  startX = event.touches[0].clientX;
+  startY = event.touches[0].clientY;
 });
 
 document.addEventListener('touchend', function(event) {
-  endX = event.changedTouches[0].clientX;
-  const swipeDistance = endX - startX;
-  if (swipeDistance > 0) {
-    // swipe right
-    scrollSpeed *= 0.9;
+  endY = event.changedTouches[0].clientY;
+  const swipeUp = endY < startY;
+  if (swipeUp) {
+    swipeSpeed *= 1.1;
   } else {
-    // swipe left
-    scrollSpeed *= 1.1;
+    swipeSpeed *= 0.9;
   }
 });
 
