@@ -41,11 +41,11 @@ document.addEventListener('touchstart', function(event) {
 });
 
 document.addEventListener('touchmove', function(event) {
-  event.preventDefault(); // prevent page reload
   endY = event.touches[0].clientY;
 });
 
-document.addEventListener('touchend', function() {
+document.addEventListener('touchend', function(event) {
+  event.preventDefault(); // prevent page reload
   const swipeDistance = endY - startY;
   if (swipeDistance > 0) {
     // swipe down
