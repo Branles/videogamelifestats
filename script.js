@@ -4,8 +4,6 @@ let y = 0;
 let dx = 2;
 let dy = 2;
 
-document.addEventListener('click', changeShape);
-
 function animate() {
   requestAnimationFrame(animate);
   x += dx;
@@ -35,11 +33,13 @@ function getRandomColor() {
 }
 
 function changeShape() {
-  const shapes = ['circle', 'triangle', 'square'];
-  const currentShape = square.className;
+  const shapes = ['square', 'circle', 'triangle'];
+  let currentShape = square.className;
   let index = shapes.indexOf(currentShape);
   index = (index + 1) % shapes.length;
   square.className = shapes[index];
 }
+
+document.addEventListener('click', changeShape);
 
 animate();
