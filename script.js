@@ -42,10 +42,10 @@ document.addEventListener('touchstart', function(event) {
 
 document.addEventListener('touchmove', function(event) {
   endY = event.touches[0].clientY;
+  event.preventDefault(); // prevent page reload
 });
 
-document.addEventListener('touchend', function(event) {
-  event.preventDefault(); // prevent page reload
+document.addEventListener('touchend', function() {
   const swipeDistance = endY - startY;
   if (swipeDistance > 0) {
     // swipe down
