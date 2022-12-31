@@ -34,8 +34,8 @@ function getRandomColor() {
 }
 
 document.addEventListener('click', function() {
-  square.style.width = Math.random() * 100 + 'px';
-  square.style.height = Math.random() * 100 + 'px';
+  const scale = Math.random() + 0.5; // random value between 0.5 and 1.5
+  square.style.transform = `scale(${scale})`;
 });
 
 document.addEventListener('wheel', function(event) {
@@ -43,9 +43,4 @@ document.addEventListener('wheel', function(event) {
     // scroll down
     scrollSpeed *= 0.9;
   } else {
-    // scroll up
-    scrollSpeed *= 1.1;
-  }
-});
-
-animate();
+   
