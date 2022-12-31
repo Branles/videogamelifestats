@@ -33,6 +33,11 @@ function getRandomColor() {
   return color;
 }
 
+document.addEventListener('click', function() {
+  square.style.width = Math.random() * 100 + 'px';
+  square.style.height = Math.random() * 100 + 'px';
+});
+
 document.addEventListener('wheel', function(event) {
   if (event.deltaY > 0) {
     // scroll down
