@@ -33,25 +33,21 @@ function getRandomColor() {
   return color;
 }
 
-let startY;
-let endY;
+let startX;
+let endX;
 
 document.addEventListener('touchstart', function(event) {
-  startY = event.touches[0].clientY;
+  startX = event.touches[0].clientX;
 });
 
-document.addEventListener('touchmove', function(event) {
-  event.preventDefault(); // prevent page reload
-  endY = event.touches[0].clientY;
-});
-
-document.addEventListener('touchend', function() {
-  const swipeDistance = endY - startY;
+document.addEventListener('touchend', function(event) {
+  endX = event.changedTouches[0].clientX;
+  const swipeDistance = endX - startX;
   if (swipeDistance > 0) {
-    // swipe down
+    // swipe right
     scrollSpeed *= 0.9;
   } else {
-    // swipe up
+    // swipe left
     scrollSpeed *= 1.1;
   }
 });
