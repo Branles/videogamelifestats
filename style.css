@@ -1,3 +1,7 @@
+body {
+  touch-action: none; /* disable scrolling on the page */
+}
+
 #square {
   position: absolute;
   top: 0;
@@ -5,5 +9,4 @@
   width: 100px;
   height: 100px;
   background-color: blue;
-  touch-action: none; /* disable scrolling on the page */
 }
