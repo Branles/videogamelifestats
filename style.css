@@ -1,5 +1,5 @@
 body {
-  touch-action: none; /* disable scrolling on the page */
+  overflow: hidden; /* disable scrolling on the page */
 }
 
 #square {
