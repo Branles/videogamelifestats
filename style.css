@@ -1,11 +1,3 @@
-#square {
-  width: 50px;
-  height: 50px;
-  background-color: blue;
-  position: absolute;
-}
-
-/* styles for the different shapes */
 .circle {
   border-radius: 50%;
 }
@@ -13,42 +5,22 @@
 .triangle {
   width: 0;
   height: 0;
-  border-style: solid;
-  border-width: 25px 0 25px 50px;
-  border-color: transparent transparent transparent blue;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid red;
 }
 
 .square {
-  /* no changes needed */
+  /* no additional styles needed */
 }
 
-.rectangle {
-  width: 75px;
+.star {
+  background: linear-gradient(#FFF, #FFC) 0 0, linear-gradient(#FFC, #FFF) 100% 0, linear-gradient(#FFF, #FFC) 0 100%, linear-gradient(#FFC, #FFF) 100% 100%, linear-gradient(#FFF, #999) 50% 0, linear-gradient(#999, #FFF) 50% 100%, linear-gradient(#FFF, #999) 50% 50%;
+  background-size: 50px 50px;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%, 0 50%, 100% 50%;
+  background-repeat: no-repeat;
 }
 
-.kite {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 25px 50px 25px 0;
-  border-color: transparent blue transparent transparent;
-}
-
-.trapezium {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 25px 50px 25px 25px;
-  border-color: transparent blue transparent transparent;
-}
-
-.parallelogram {
-  width: 75px;
-  transform: skew(20deg);
-}
-
-.rhombus {
-  width: 50px;
-  height: 50px;
+.diamond {
   transform: rotate(45deg);
 }
