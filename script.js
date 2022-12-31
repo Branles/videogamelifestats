@@ -3,17 +3,8 @@ let x = 0;
 let y = 0;
 let dx = 2;
 let dy = 2;
-let shapes = [
-  'circle',
-  'triangle',
-  'square',
-  'rectangle',
-  'kite',
-  'trapezium',
-  'parallelogram',
-  'rhombus',
-];
-let currentShape = 0;
+
+document.addEventListener('click', changeShape);
 
 function animate() {
   requestAnimationFrame(animate);
@@ -34,6 +25,12 @@ function animate() {
   }
 }
 
+function changeShape() {
+  const shapes = ['circle', 'triangle', 'square', 'star', 'diamond'];
+  const shape = shapes[Math.floor(Math.random() * shapes.length)];
+  square.className = shape;
+}
+
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';
@@ -42,12 +39,5 @@ function getRandomColor() {
   }
   return color;
 }
-
-function changeShape() {
-  currentShape = (currentShape + 1) % shapes.length;
-  square.className = shapes[currentShape];
-}
-
-window.addEventListener('click', changeShape);
 
 animate();
