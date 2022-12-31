@@ -1,42 +1,11 @@
+#square {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  border-radius: 20px;
+  position: relative;
+}
+
 body {
-	background-color: #add8e6;
-}
-
-header {
-	background-color: #87ceeb;
-	color: white;
-	text-align: center;
-}
-
-nav ul li a {
-	color: white;
-	text-decoration: none;
-}
-
-nav ul li a:hover {
-	color: #00008b;
-}
-
-section {
-	padding: 20px;
-	border: 2px solid #00008b;
-	margin: 20px;
-	background-color: #e0ffff;
-}
-
-h2 {
-	color: #00008b;
-}
-
-p {
-	color: #00008b;
-}
-
-ul {
-	color: #00008b;
-}
-
-li {
-	list-style-type: square;
-	margin-left: 20px;
+  border: 1cm solid darkblue;
 }
