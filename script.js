@@ -3,11 +3,12 @@ let x = 0;
 let y = 0;
 let dx = 2;
 let dy = 2;
+let scrollSpeed = 1;
 
 function animate() {
   requestAnimationFrame(animate);
-  x += dx;
-  y += dy;
+  x += dx * scrollSpeed;
+  y += dy * scrollSpeed;
   square.style.top = y + 'px';
   square.style.left = x + 'px';
 
@@ -32,9 +33,14 @@ function getRandomColor() {
   return color;
 }
 
-document.addEventListener('click', function() {
-  const scale = Math.random() + 0.5; // random value between 0.5 and 1.5
-  square.style.transform = `scale(${scale})`;
+document.addEventListener('wheel', function(event) {
+  if (event.deltaY > 0) {
+    // scroll down
+    scrollSpeed *= 0.9;
+  } else {
+    // scroll up
+    scrollSpeed *= 1.1;
+  }
 });
 
 animate();
