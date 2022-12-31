@@ -17,6 +17,6 @@ body {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 25px 0 25px 50px;
-  border-color: transparent transparent transparent blue;
+  border-width: 25px 50px 25px 0;
+  border-color: transparent blue transparent transparent;
 }
