@@ -15,10 +15,25 @@ function animate() {
   const squareRect = square.getBoundingClientRect();
   if (squareRect.top < 0 || squareRect.bottom > window.innerHeight) {
     dy *= -1;
+    square.style.backgroundColor = getRandomColor();
   }
   if (squareRect.left < 0 || squareRect.right > window.innerWidth) {
     dx *= -1;
+    square.style.backgroundColor = getRandomColor();
   }
 }
 
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
 animate();
+
+document.addEventListener('click', function() {
+  square.style.backgroundColor = getRandomColor();
+});
