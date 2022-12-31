@@ -32,8 +32,22 @@ function getRandomColor() {
   return color;
 }
 
+function getRandomShape() {
+  const shapes = ['square', 'circle', 'triangle'];
+  const shape = shapes[Math.floor(Math.random() * shapes.length)];
+  if (shape === 'square') {
+    square.style.borderRadius = '0';
+  } else if (shape === 'circle') {
+    square.style.borderRadius = '50%';
+  } else if (shape === 'triangle') {
+    square.style.borderBottom = '50px solid transparent';
+    square.style.borderTop = '50px solid transparent';
+    square.style.borderLeft = '50px solid blue';
+  }
+}
+
 animate();
 
 document.addEventListener('click', function() {
-  square.style.backgroundColor = getRandomColor();
+  getRandomShape();
 });
