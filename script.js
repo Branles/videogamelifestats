@@ -33,33 +33,6 @@ function getRandomColor() {
   return color;
 }
 
-let startX;
-let startY;
-
-document.addEventListener('touchstart', function(event) {
-  const touch = event.touches[0];
-  startX = touch.clientX;
-  startY = touch.clientY;
-});
-
-document.addEventListener('touchend', function(event) {
-  const touch = event.changedTouches[0];
-  const endX = touch.clientX;
-  const endY = touch.clientY;
-  const dx = endX - startX;
-  const dy = endY - startY;
-  const absDx = Math.abs(dx);
-  const absDy = Math.abs(dy);
-  if (absDx > absDy) {
-    if (dx > 0) {
-      // swipe right
-      scrollSpeed *= 0.9;
-    } else {
-      // swipe left
-      scrollSpeed *= 1.1;
-    }
-  }
-});
 
 document.addEventListener('click', function() {
   const scale = Math.random() + 0.5; // random value between 0.5 and 1.5
