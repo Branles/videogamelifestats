@@ -5,29 +5,18 @@
   position: absolute;
 }
 
-.circle {
+#square.circle {
   border-radius: 50%;
 }
 
-.triangle {
+#square.triangle {
   width: 0;
   height: 0;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  border-bottom: 50px solid red;
+  border-style: solid;
+  border-width: 25px 0 25px 50px;
+  border-color: transparent transparent transparent blue;
 }
 
-.square {
-  /* no additional styles needed */
-}
-
-.star {
-  background: linear-gradient(#FFF, #FFC) 0 0, linear-gradient(#FFC, #FFF) 100% 0, linear-gradient(#FFF, #FFC) 0 100%, linear-gradient(#FFC, #FFF) 100% 100%, linear-gradient(#FFF, #999) 50% 0, linear-gradient(#999, #FFF) 50% 100%, linear-gradient(#FFF, #999) 50% 50%;
-  background-size: 50px 50px;
-  background-position: 0 0, 100% 0, 100% 100%, 0 100%, 0 50%, 100% 50%;
-  background-repeat: no-repeat;
-}
-
-.diamond {
-  transform: rotate(45deg);
+#square.square {
+  border-radius: 0;
 }
