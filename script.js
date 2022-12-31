@@ -41,6 +41,7 @@ document.addEventListener('touchstart', function(event) {
 });
 
 document.addEventListener('touchmove', function(event) {
+  event.preventDefault(); // prevent page reload
   endY = event.touches[0].clientY;
 });
 
@@ -63,7 +64,7 @@ document.addEventListener('click', function() {
 document.addEventListener('wheel', function(event) {
   if (event.deltaY > 0) {
     // scroll down
-scrollSpeed *= 0.9;
+    scrollSpeed *= 0.9;
   } else {
     // scroll up
     scrollSpeed *= 1.1;
