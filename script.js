@@ -1,6 +1,6 @@
 const square = document.getElementById('square');
-let x = (window.innerWidth - square.offsetWidth) / 2;
-let y = (window.innerHeight - square.offsetHeight) / 2;
+let x = (window.innerWidth - square.clientWidth) / 2;
+let y = (window.innerHeight - square.clientHeight) / 2;
 let dx = 2;
 let dy = 2;
 let scrollSpeed = 1;
