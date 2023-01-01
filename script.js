@@ -54,7 +54,7 @@ document.addEventListener('click', function(event) {
   const size = Math.floor(Math.random() * 200) + 50; // random size from 50 to 250 pixels
   square.style.width = size + 'px';
   square.style.height = size + 'px';
-  square.style.borderRadius = size + 'px'; // make the square circular
+  square.style.borderRadius = '0'; // remove circular effect
 });
 
 document.addEventListener('wheel', function(event) {
