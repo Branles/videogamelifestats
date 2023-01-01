@@ -14,11 +14,19 @@ function animate() {
 
   // check for wall collisions
   const squareRect = square.getBoundingClientRect();
-  if (squareRect.top + window.scrollY < 0 || squareRect.bottom + window.scrollY > window.innerHeight) {
+  if (squareRect.top < 5) {
     dy *= -1;
     square.style.backgroundColor = getRandomColor();
   }
-  if (squareRect.left + window.scrollX < 0 || squareRect.right + window.scrollX > window.innerWidth) {
+  if (squareRect.bottom > window.innerHeight - 5) {
+    dy *= -1;
+    square.style.backgroundColor = getRandomColor();
+  }
+  if (squareRect.left < 5) {
+    dx *= -1;
+    square.style.backgroundColor = getRandomColor();
+  }
+  if (squareRect.right > window.innerWidth - 5) {
     dx *= -1;
     square.style.backgroundColor = getRandomColor();
   }
@@ -32,7 +40,6 @@ function getRandomColor() {
   }
   return color;
 }
-
 
 document.addEventListener('click', function() {
   const scale = Math.random() + 0.5; // random value between 0.5 and 1.5
