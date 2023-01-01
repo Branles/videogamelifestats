@@ -41,7 +41,7 @@ function getRandomColor() {
   return color;
 }
 
-square.addEventListener('click', function() {
+document.body.addEventListener('click', function() {
   document.body.style.backgroundColor = getRandomColor();
 
   // Generate random size for square
