@@ -46,6 +46,10 @@ square.addEventListener('click', function() {
 });
 
 document.body.addEventListener('click', function(event) {
+  if (event.target === square) {
+    return;
+  }
+
   // Generate random size for square
   const size = Math.floor(Math.random() * 200) + 50; // random size from 50 to 250 pixels
   square.style.width = size + 'px';
