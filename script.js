@@ -41,9 +41,13 @@ function getRandomColor() {
   return color;
 }
 
-document.addEventListener('click', function() {
-  const scale = Math.random() + 0.5; // random value between 0.5 and 1.5
-  square.style.transform = `scale(${scale})`;
+document.addEventListener('click', function(event) {
+  if (event.button === 1) { // middle mouse button
+    document.body.style.backgroundColor = getRandomColor();
+  } else {
+    const scale = Math.random() + 0.5; // random value between 0.5 and 1.5
+    square.style.transform = `scale(${scale})`;
+  }
 });
 
 document.addEventListener('wheel', function(event) {
