@@ -53,10 +53,13 @@ document.addEventListener('wheel', function(event) {
   } else {
     // scroll up
     scrollSpeed *= 1.1;
- 
+  }
 });
-document.addEventListener('contextmenu', function(event) {
-  event.preventDefault();
+
+document.addEventListener('mousedown', function(event) {
+  if (event.button === 1) { // middle mouse button
+    document.body.style.backgroundColor = getRandomColor();
+  }
 });
 
 animate();
