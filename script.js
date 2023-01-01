@@ -41,6 +41,10 @@ function getRandomColor() {
   return color;
 }
 
+square.removeEventListener('click', function() {
+  document.body.style.backgroundColor = getRandomColor();
+});
+
 document.body.addEventListener('click', function() {
   document.body.style.backgroundColor = getRandomColor();
 
