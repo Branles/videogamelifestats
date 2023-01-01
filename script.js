@@ -49,11 +49,15 @@ document.addEventListener('click', function() {
 document.addEventListener('wheel', function(event) {
   if (event.deltaY > 0) {
     // scroll down
-scrollSpeed *= 0.9;
+    scrollSpeed *= 0.9;
   } else {
     // scroll up
     scrollSpeed *= 1.1;
   }
 });
+
+// set starting position
+square.style.top = (window.innerHeight - square.offsetHeight) / 2 + 'px';
+square.style.left = (window.innerWidth - square.offsetWidth) / 2 + 'px';
 
 animate();
