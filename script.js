@@ -46,16 +46,21 @@ document.body.style.backgroundColor = getRandomColor();
 });
 
 document.body.addEventListener('click', function(event) {
-if (event.target === square) {
-return;
-}
-// Generate random size for square
-const size = Math.floor(Math.random() * 200) + 50; // random size from 50 to 250 pixels
-square.style.width = size + 'px';
-square.style.height = size + 'px';
-square.style.top = (window.innerHeight - square.clientHeight) / 2 + 'px';
-square.style.left = (window.innerWidth - square.clientWidth) / 2 + 'px';
+  if (event.target === square) {
+    return;
+  }
+  // Generate random size for square
+  const size = Math.floor(Math.random() * 200) + 50; // random size from 50 to 250 pixels
+  square.style.width = size + 'px';
+  square.style.height = size + 'px';
+  square.style.top = (window.innerHeight - square.clientHeight) / 2 + 'px';
+  square.style.left = (window.innerWidth - square.clientWidth) / 2 + 'px';
+
+  // Update the x and y variables to reflect the new size of the square
+  x = (window.innerWidth - square.clientWidth) / 2;
+  y = (window.innerHeight - square.clientHeight) / 2;
 });
+
 
 document.addEventListener('wheel', function(event) {
 if (event.deltaY > 0) {
