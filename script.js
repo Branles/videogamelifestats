@@ -41,13 +41,14 @@ function getRandomColor() {
   return color;
 }
 
-square.removeEventListener('click', function() {
+square.addEventListener('click', function() {
   document.body.style.backgroundColor = getRandomColor();
 });
 
-document.body.addEventListener('click', function() {
-  document.body.style.backgroundColor = getRandomColor();
-
+document.body.addEventListener('click', function(event) {
+  if (event.target === square) {
+    return;
+  }
   // Generate random size for square
   const size = Math.floor(Math.random() * 200) + 50; // random size from 50 to 250 pixels
   square.style.width = size + 'px';
