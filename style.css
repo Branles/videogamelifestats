@@ -1,7 +1,6 @@
 body {
+  overflow: hidden; /* disable scrolling on the page */  
   margin: 5mm;
-  background-color: #add8e6; /* light blue */
-  overflow: hidden; /* disable scrolling on the page */
 }
 
 #square {
