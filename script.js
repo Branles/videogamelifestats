@@ -50,16 +50,10 @@ if (event.target === square) {
 return;
 }
 
-// Get current color of square
-const currentColor = window.getComputedStyle(square).getPropertyValue('background-color');
-
-// Generate random size and color for square, but only if the clicked color is different from the current color of the square
-if (getRandomColor() !== currentColor) {
+// Generate random size for square
 const size = Math.floor(Math.random() * 200) + 50; // random size from 50 to 250 pixels
 square.style.width = size + 'px';
 square.style.height = size + 'px';
-square.style.backgroundColor = getRandomColor();
-}
 });
 
 document.addEventListener('wheel', function(event) {
