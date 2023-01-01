@@ -45,7 +45,7 @@ square.addEventListener('click', function() {
   document.body.style.backgroundColor = getRandomColor();
 });
 
-document.body.addEventListener('click', function(event) {
+document.addEventListener('click', function(event) {
   if (event.target === square) {
     return;
   }
