@@ -43,6 +43,11 @@ function getRandomColor() {
 
 square.addEventListener('click', function() {
   document.body.style.backgroundColor = getRandomColor();
+
+  // Generate random size for square
+  const size = Math.floor(Math.random() * 200) + 50; // random size from 50 to 250 pixels
+  square.style.width = size + 'px';
+  square.style.height = size + 'px';
 });
 
 document.addEventListener('wheel', function(event) {
