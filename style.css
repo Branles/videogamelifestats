@@ -1,5 +1,6 @@
 body {
   margin: 5mm;
+  background-color: #add8e6; /* light blue */
   overflow: hidden; /* disable scrolling on the page */
 }
 
@@ -10,5 +11,4 @@ body {
   width: 100px;
   height: 100px;
   background-color: blue;
-  touch-action: manipulation;
-}
+  touch-action: manipulation
