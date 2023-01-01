@@ -56,8 +56,4 @@ document.addEventListener('wheel', function(event) {
   }
 });
 
-// set starting position
-square.style.top = (window.innerHeight - square.offsetHeight) / 2 + 'px';
-square.style.left = (window.innerWidth - square.offsetWidth) / 2 + 'px';
-
 animate();
