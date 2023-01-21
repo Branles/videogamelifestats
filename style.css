@@ -1,13 +1,1 @@
-body {
-  overflow: hidden; /* disable scrolling on the page */  
-  margin: 5mm;
-}
 
-#square {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100px;
-  height: 100px;
-  background-color: blue;
-  touch-action: manipulation
