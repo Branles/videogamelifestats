@@ -1,1 +1,14 @@
+#dice-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+#dice-result {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#money-earned {
+  font-size: 1.5em;
+}
