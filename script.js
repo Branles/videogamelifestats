@@ -4,6 +4,6 @@ const moneyEarned = document.getElementById("money-earned");
 
 rollDiceButton.addEventListener("click", function() {
   const roll = Math.floor(Math.random() * 6) + 1;
-  diceResult.innerHTML = roll;
+  diceResult.innerHTML = `You rolled a ${roll}`;
   moneyEarned.innerHTML = `You earned ${roll} fictional money!`;
 });
