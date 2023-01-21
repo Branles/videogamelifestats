@@ -1,3 +1,26 @@
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#player-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#player-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#player-money {
+  font-size: 1.5em;
+}
+
 #dice-container {
   display: flex;
   flex-direction: column;
