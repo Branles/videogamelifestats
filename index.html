@@ -1,13 +1,21 @@
-<div id="game-container">
-  <h1>Dice Game</h1>
-  <div id="player-container">
-    <div id="player-name"></div>
-    <div id="player-money"></div>
-    <div id="current-money"></div>
-  </div>
-  <div id="dice-container">
-    <button id="roll-dice">Roll Dice</button>
-    <div id="dice-result"></div>
-    <div id="money-earned"></div>
-  </div>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mission Chatbot</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="chatbot">
+      <div id="chatbot-header">Mission Chatbot</div>
+      <div id="chatbot-body">
+        <p>Welcome, I am your mission chatbot. What mission would you like to go on?</p>
+        <form>
+          <input type="text" id="input-mission">
+          <button type="submit" id="submit-mission">Submit</button>
+        </form>
+        <div id="mission-output"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
