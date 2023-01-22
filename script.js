@@ -3,6 +3,7 @@ let completedMissions = JSON.parse(localStorage.getItem("completedMissions")) ||
 const inputMission = document.getElementById("input-mission");
 const submitMission = document.getElementById("submit-mission");
 const missionOutput = document.getElementById("mission-output");
+const completedMissionsList = document.getElementById("completed-missions-list");
 
 submitMission.addEventListener("click", function(e) {
   e.preventDefault();
@@ -14,6 +15,12 @@ submitMission.addEventListener("click", function(e) {
       completedMissions.push(inputMission.value);
       localStorage.setItem("completedMissions", JSON.stringify(completedMissions));
       missionOutput.innerHTML = `Mission: ${inputMission.value} has been completed and added to completed missions list`;
+      completedMissionsList.innerHTML = "";
+      completedMissions.forEach(mission => {
+        const li = document.createElement("li");
+        li.innerHTML = mission;
+        completedMissionsList.appendChild(li);
+      });
     }, 60000); 
   }
 });
