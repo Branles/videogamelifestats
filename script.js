@@ -1,14 +1,12 @@
-const currentMoney = document.getElementById("current-money");
+const inputMission = document.getElementById("input-mission");
+const submitMission = document.getElementById("submit-mission");
+const missionOutput = document.getElementById("mission-output");
 
-let totalMoney = 0;
-
-currentMoney.innerHTML = `Current money: ${totalMoney}`;
-
-rollDiceButton.addEventListener("click", function() {
-  const roll = Math.floor(Math.random() * 6) + 1;
-  diceResult.innerHTML = `You rolled a ${roll}`;
-  totalMoney += roll;
-  moneyEarned.innerHTML = `You earned ${roll} fictional money!`;
-  playerMoney.innerHTML = `Total money: ${totalMoney}`;
-  currentMoney.innerHTML = `Current money: ${totalMoney}`;
+submitMission.addEventListener("click", function(e) {
+  e.preventDefault();
+  if (inputMission.value === "") {
+    missionOutput.innerHTML = "Please enter a mission";
+  } else {
+    missionOutput.innerHTML = `You have been sent on a mission to: ${inputMission.value}`;
+  }
 });
