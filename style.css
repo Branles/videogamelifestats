@@ -1,37 +1,17 @@
-#game-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+body {
+  background-color: blue;
 }
 
-#player-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#chatbot {
+  width: 300px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+}
+
+#chatbot-header {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
   margin-bottom: 20px;
-}
-
-#player-name {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-#player-money {
-  font-size: 1.5em;
-}
-
-#dice-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#dice-result {
-  font-size: 2em;
-  font-weight: bold;
-}
-
-#money-earned {
-  font-size: 1.5em;
 }
