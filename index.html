@@ -1,81 +1,35 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-/* Popup container - can be anything you want */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+<html lang="en">
 
-/* The actual popup */
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Shapes</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
 
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
+	<body>
+		
+		<a href="https://www.pornhub.com/gayporn"><img title="this dudes probaly gay" src="C:\Users\User\Documents\Code\Sup.jpg" alt="sup"></a>
+		<a href="https://www.youtube.com/channel/UCVlA0sqsk0yEZ3HhxfAjRVA" class="handle" title="www.youtube.com/channel/UCVlA0sqsk0yEZ3HhxfAjRVA" 		target="_blank">@Branles</a>
+		<p>Im Brandon look<br>at my shapes ><br><br>why dont you click<br>my shapes</p>
 
-/* Toggle this class - hide and show the popup */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
-}
+		<div class="square" id="colorChangeDivs" title="click me"></div>
+		<div class="circle" id="colorChangeDivc" title="click me"></div>
+		<div class="triangle" id="colorChangeDivt" title="click me"></div>
+		<svg class="pentagon" id="colorChangeDivpg" xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 100 100">
+  		<title>click me</title>
+		<polygon points="50,10 10,40 20,80 80,80 90,40" fill="blue" />
+		</svg>
+		<div class="rectangle" id="colorChangeDivr" title="click me"></div>
+		<svg class="star" id="colorChangeDivst" xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 200 200">
+  		<title>click me</title>
+  		<polygon points="100,20 123.2,81.2 182.8,81.2 135.6,118.8 157.2,190.4 100,149.6 42.8,190.4 64.4,118.8 17.2,81.2 76.8,81.2" fill="blue" />
+		</svg>
 
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;} 
-  to {opacity: 1;}
-}
 
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
-</style>
-</head>
-<body style="text-align:center">
 
-<h2>Popup</h2>
+		<script src="script.js"></script>
+	</body>
 
-<div class="popup" onclick="myFunction()">Click me to toggle the popup!
-  <span class="popuptext" id="myPopup">A Simple Popup!</span>
-</div>
-
-<script>
-// When the user clicks on div, open the popup
-function myFunction() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-}
-</script>
-
-</body>
-</html>
+</html>   

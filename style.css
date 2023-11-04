@@ -1,52 +1,69 @@
-/* Popup container */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
+img {
+width: 100px;
+border-radius: 50px;
+float: left;
+margin-right: 10px;
 }
 
-/* The actual popup (appears on top) */
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
+.handle{
+font-weight: bold;
+color: black;
+text-decoration: none;
 }
 
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
+.square {
+height: 200px;
+width: 200px;
+background: blue;
+position: absolute;
+top: 50%;
+left: 30%;
+margin: -50px 0 0 -50px;
 }
 
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
+.circle {
+height: 200px;
+width: 200px;
+border-radius: 50%;
+background: blue;
+position: absolute;
+top: 50%;
+left: 70%;
+margin: -50px 0 0 -50px;
+}
+		
+.triangle {
+width: 0;
+height: 0;
+border-left: 100px solid transparent;
+border-right: 100px solid transparent;
+border-bottom: 200px solid blue;
+position: absolute;
+top: 50%;
+left: 50%;
+margin: -50px 0 0 -50px;
 }
 
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+.rectangle {
+height: 100px;
+width: 200px;
+background: blue;
+position: absolute;
+top: 20%;
+left: 30%;
+margin: -50px 0 0 -50px;
 }
 
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
+.star {
+position: absolute;
+top: 8%;
+left: 48%;
+margin: -50px 0 0 -50px;
+}
+
+.pentagon {
+position: absolute;
+top: 8%;
+left: 68%;
+margin: -50px 0 0 -50px;
 }
